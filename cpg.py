@@ -3,7 +3,7 @@ import webbrowser
 a = random.randint(0,255)
 print(a)
 b = a-25
-fi = open("htmlwithcodes.html", "w")
+fi = open("index.html", "w")
 for x in range(100):
                 f = []
                 r=random.randint(a-50,a)
