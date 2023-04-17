@@ -4,7 +4,9 @@
 <div>
 
   <hr>
-    <label style="text-align:center; font-family: Arial; font-size: 20px;" id="red-lbl" for="rlight">general light:   </label><input type="range" id="light" min="0" max="205" value="0">
+    <label style="text-align:center; font-family: Arial; font-size: 20px;" id="l-lbl" for="light">general light:   </label><input type="range" id="light" min="0" max="205" value="0">
+	 <br>
+	 <label style="text-align:center; font-family: Arial; font-size: 20px;" id="c-lbl" for="contrast">general contrast:   </label><input type="range" id="contrast" min="0" max="50" value="0">
 	 <br>
 	 <script> 
       function componentToHex(c) {
@@ -19,9 +21,10 @@
 		}
 		function fun() { 
 			light = document.getElementById("light").value
-			x = Math.floor(ranrange(0,50));
-			y = Math.floor(ranrange(0,50));
-			z = Math.floor(ranrange(0,50));
+			contrast = document.getElementById("contrast").value
+			x = Math.floor(ranrange(0,contrast));
+			y = Math.floor(ranrange(0,contrast));
+			z = Math.floor(ranrange(0,contrast));
 			h = +light
 			i = +x
 			j = +y
@@ -33,11 +36,14 @@
 			console.log(htmlcolr);
          document.getElementById("result").innerHTML += '<div style="background-color: '+htmlcolr+' ; padding: 10px;">'+htmlcolr+'</div>'; 
       } 
+		function clear(){
+			window.location.reload();
+		}
    </script>
 	<br>
 	<br>
-   <button onclick = "fun()"> click me !</button> 
-   
+   <button onclick = "fun()">Generate Color</button> 
+   <button onclick = "clear()">Clear Colors</button> 
      <div id = "result"> </div> 
    
   </div>
