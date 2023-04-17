@@ -1,0 +1,45 @@
+<html>
+<title>Playground</title>
+<body>
+<div>
+
+  <hr>
+    <label style="text-align:center; font-family: Arial; font-size: 20px;" id="red-lbl" for="rlight">general light:   </label><input type="range" id="light" min="0" max="205" value="0">
+	 <br>
+	 <script> 
+      function componentToHex(c) {
+  			let hex = c.toString(16);
+  			return hex.length == 1 ? "0" + hex : hex;
+		}
+		function rgbtohex(r, g, b) {
+  			return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+		}
+		function ranrange(min, max) {
+    		return (Math.random() * (max - min + 1)) + min;
+		}
+		function fun() { 
+			light = document.getElementById("light").value
+			x = Math.floor(ranrange(0,50));
+			y = Math.floor(ranrange(0,50));
+			z = Math.floor(ranrange(0,50));
+			h = +light
+			i = +x
+			j = +y
+			k = +z
+			console.log(light);
+			console.log(x,y,z);
+			console.log(h+i,h+j,h+k);
+			htmlcolr = rgbtohex(light+x,light+y,light+z).substr(0,7);
+			console.log(htmlcolr);
+         document.getElementById("result").innerHTML += '<div style="background-color: '+htmlcolr+' ; padding: 10px;">'+htmlcolr+'</div>'; 
+      } 
+   </script>
+	<br>
+	<br>
+   <button onclick = "fun()"> click me !</button> 
+   
+     <div id = "result"> </div> 
+   
+  </div>
+</body>
+</html>
