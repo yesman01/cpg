@@ -6,16 +6,10 @@
     <title>My.PPS</title>
     <link rel="shortcut icon" type="image/jpg" href="https://filescdn.classlink.com/resources/customlinks/1614876373145-a1c0c502a7f64b38a8d0063691ce15e3.png"/>
     <style>
-        body{ animation: animateSectionBackground 50s infinite;}
         @keyframes animateSectionBackgroundclr {
-            00%, 11% {color: #ffffff;}
-            12%, 24% {color: #000000;}
-            25%, 36% {color: #ffffff;}
-            37%, 49% {color: #ffffff;}
-            50%, 61% {color: #ffffff;}
-            62%, 74% {color: #000000;}
-            75%, 86% {color: #ffffff;}
-            87%, 99% {color: #ffffff;}
+            00%, 25% {background-color: #4b4b64;}
+            50%, 75% {background-color: #373746;}
+            100% {background-color: #4b4b64;}
         }
         body {
             background-color: #4b4b64;
@@ -23,6 +17,7 @@
             background-attachment: fixed;
             background-size: cover;
             text-align: center;
+            animation: animateSectionBackgroundclr 50s infinite;
         }
         a {
             font-family: "Raleway";
