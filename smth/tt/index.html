@@ -15,12 +15,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: url('background2.jpg')no-repeat;
+    background-position: center;
+    background-size: cover;
   }
+  canvas{
+    position: relative;
+    width: 320px;
+    height: 640px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  canvas {
-    border: 3px solid cyan;
-    background: black;
-  }
   iframe {
     border: 3px solid cyan;
     background: teal;
