@@ -1,0 +1,81 @@
+--@name cool holos
+--@author
+--@server
+
+BALLER = hologram.create(chip():getPos(), Angle(0,0,0), "models/props_junk/sawblade001a.mdl")
+BALLER:setParent(chip())
+BALLER:setTrails(20,20,200,"trails/laser",Color(255,0,0,75))
+
+BALLER1 = hologram.create(chip():getPos(), Angle(0,0,0), "models/props_junk/sawblade001a.mdl")
+BALLER1:setParent(chip())
+BALLER1:setTrails(20,20,200,"trails/laser",Color(255,255,0,75))
+
+BALLER2 = hologram.create(chip():getPos(), Angle(0,0,0), "models/props_junk/sawblade001a.mdl")
+BALLER2:setParent(chip())
+BALLER2:setTrails(20,20,200,"trails/laser",Color(0,255,0,75))
+
+BALLER3 = hologram.create(chip():getPos(), Angle(0,0,0), "models/props_junk/sawblade001a.mdl")
+BALLER3:setParent(chip())
+BALLER3:setTrails(20,20,200,"trails/laser",Color(0,255,255,75))
+
+BALLER4 = hologram.create(chip():getPos(), Angle(0,0,0), "models/props_junk/sawblade001a.mdl")
+BALLER4:setParent(chip())
+BALLER4:setTrails(20,20,200,"trails/laser",Color(0,0,255,75))
+
+BALLER5 = hologram.create(chip():getPos(), Angle(0,0,0), "models/props_junk/sawblade001a.mdl")
+BALLER5:setParent(chip())
+BALLER5:setTrails(20,20,200,"trails/laser",Color(255,0,255,75))
+
+BALLER6 = hologram.create(chip():getPos(), Angle(0,0,0), "models/props_junk/sawblade001a.mdl")
+BALLER6:setParent(chip())
+BALLER6:setTrails(20,20,200,"trails/laser",Color(255,0,0,75))
+
+BALLER7 = hologram.create(chip():getPos(), Angle(0,0,0), "models/props_junk/sawblade001a.mdl")
+BALLER7:setParent(chip())
+BALLER7:setTrails(20,20,200,"trails/laser",Color(255,255,0,75))
+
+BALLER8 = hologram.create(chip():getPos(), Angle(0,0,0), "models/props_junk/sawblade001a.mdl")
+BALLER8:setParent(chip())
+BALLER8:setTrails(20,20,200,"trails/laser",Color(0,255,0,75))
+
+BALLER9 = hologram.create(chip():getPos(), Angle(0,0,0), "models/props_junk/sawblade001a.mdl")
+BALLER9:setParent(chip())
+BALLER9:setTrails(20,20,200,"trails/laser",Color(0,255,255,75))
+
+BALLER0 = hologram.create(chip():getPos(), Angle(0,0,0), "models/props_junk/sawblade001a.mdl")
+BALLER0:setParent(chip())
+BALLER0:setTrails(20,20,200,"trails/laser",Color(0,0,255,75))
+
+BALLER10 = hologram.create(chip():getPos(), Angle(0,0,0), "models/props_junk/sawblade001a.mdl")
+BALLER10:setParent(chip())
+BALLER10:setTrails(20,20,200,"trails/laser",Color(255,0,255,75))
+
+
+A = 0
+hook.add("think","",function()
+    A = A - 0.05
+    BALLER:setPos(chip():getPos()+Vector(math.sin(A+0)*50,math.cos(A+0)*50,10))
+    BALLER1:setPos(chip():getPos()+Vector(math.sin(A+0.5)*50,math.cos(A+0.5)*50,20))
+    BALLER2:setPos(chip():getPos()+Vector(math.sin(A+1)*50,math.cos(A+1)*50,30))
+    BALLER3:setPos(chip():getPos()+Vector(math.sin(A+1.5)*50,math.cos(A+1.5)*50,40))
+    BALLER4:setPos(chip():getPos()+Vector(math.sin(A+2)*50,math.cos(A+2)*50,50))
+    BALLER5:setPos(chip():getPos()+Vector(math.sin(A+2.5)*50,math.cos(A+2.5)*50,60))
+    BALLER6:setPos(chip():getPos()+Vector(math.sin(A+3)*50,math.cos(A+3)*50,70))
+    BALLER7:setPos(chip():getPos()+Vector(math.sin(A+3.5)*50,math.cos(A+3.5)*50,80))
+    BALLER8:setPos(chip():getPos()+Vector(math.sin(A+4)*50,math.cos(A+4)*50,90))
+    BALLER9:setPos(chip():getPos()+Vector(math.sin(A+4.5)*50,math.cos(A+4.5)*50,100))
+    BALLER0:setPos(chip():getPos()+Vector(math.sin(A+5)*50,math.cos(A+5)*50,110))
+    BALLER10:setPos(chip():getPos()+Vector(math.sin(A+5.5)*50,math.cos(A+5.5)*50,120))
+    BALLER:setAngles(Angle(0,A*-50+5,0))
+    BALLER1:setAngles(Angle(0,A*-50+10,0))
+    BALLER2:setAngles(Angle(0,A*-50+15,0))
+    BALLER3:setAngles(Angle(0,A*-50+20,0))
+    BALLER4:setAngles(Angle(0,A*-50+25,0))
+    BALLER5:setAngles(Angle(0,A*-50+30,0))
+    BALLER6:setAngles(Angle(0,A*-50+35,0))
+    BALLER7:setAngles(Angle(0,A*-50+40,0))
+    BALLER8:setAngles(Angle(0,A*-50+45,0))
+    BALLER9:setAngles(Angle(0,A*-50+50,0))
+    BALLER0:setAngles(Angle(0,A*-50+55,0))
+    BALLER10:setAngles(Angle(0,A*-50+60,0))
+end)
